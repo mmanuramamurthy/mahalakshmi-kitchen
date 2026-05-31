@@ -1,484 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahalakshmi Kitchen – Crispy. Authentic. Irresistible.</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700;900&family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahalakshmi Kitchen — A Story in Every Dosa</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/916360424868" target="_blank" class="float-wa" aria-label="Order on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
-  <span>Order Now</span>
-</a>
+<!-- ░░ PRELOADER ░░ -->
+<div class="preloader" id="preloader">
+  <div class="pre-inner">
+    <svg class="pre-ring" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="#C8922A" stroke-width="1" stroke-dasharray="226" stroke-dashoffset="226"/></svg>
+    <span class="pre-script">Mahalakshmi</span>
+    <span class="pre-sub">Kitchen</span>
+  </div>
+</div>
 
-<!-- ========== HEADER ========== -->
-<header class="header" id="header">
-  <div class="header-inner container">
-    <a href="#home" class="logo">
-      <div class="logo-mark">
-        <svg width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="none" stroke="#D4A017" stroke-width="1.5"/><circle cx="24" cy="24" r="18" fill="#2D1206"/><text x="24" y="29" font-size="18" text-anchor="middle" fill="#D4A017">🍽</text></svg>
-      </div>
-      <div class="logo-words">
-        <span class="logo-name">Mahalakshmi <em>Kitchen</em></span>
-        <span class="logo-kn">ಮಹಾಲಕ್ಷ್ಮಿ ಕಿಚನ್</span>
-      </div>
+<!-- ░░ STORY PROGRESS ░░ -->
+<div class="story-progress" id="storyProgress"></div>
+
+<!-- ░░ CHAPTER INDICATOR ░░ -->
+<div class="chapter-indicator" id="chapterIndicator">
+  <span class="ci-label">Chapter</span>
+  <span class="ci-num" id="ciNum">I</span>
+</div>
+
+<!-- ░░ HEADER ░░ -->
+<header class="site-header" id="siteHeader">
+  <div class="sh-inner">
+    <a href="#home" class="sh-logo">
+      <span class="sh-logo-script">Mahalakshmi</span>
+      <span class="sh-logo-word">KITCHEN</span>
+      <span class="sh-logo-kn">ಮಹಾಲಕ್ಷ್ಮಿ ಕಿಚನ್</span>
     </a>
-    <nav class="nav" id="nav">
-      <a href="#home"    class="nav-link">Home</a>
-      <a href="#about"   class="nav-link">About</a>
-      <a href="#menu"    class="nav-link">Menu</a>
-      <a href="#gallery" class="nav-link">Gallery</a>
-      <a href="#contact" class="nav-link">Contact</a>
+    <nav class="sh-nav" id="shNav">
+      <a href="#home"       class="sh-link" data-chapter="1">The Story</a>
+      <a href="#ch-dawn"    class="sh-link" data-chapter="2">The Craft</a>
+      <a href="#ch-menu"    class="sh-link" data-chapter="4">Our Dosas</a>
+      <a href="#ch-love"    class="sh-link" data-chapter="5">The Joy</a>
+      <a href="#ch-contact" class="sh-link" data-chapter="6">Visit Us</a>
     </nav>
-    <a href="tel:6360424868" class="header-cta">📞 6360424868</a>
-    <button class="burger" id="burger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+    <a href="https://wa.me/916360424868" target="_blank" class="sh-order">Order on WhatsApp</a>
+    <button class="sh-burger" id="shBurger" aria-label="Menu">
+      <span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- ========== HERO ========== -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-grain"></div>
-  <div class="hero-overlay"></div>
-  <div class="container hero-inner">
-    <div class="hero-content reveal">
-      <span class="hero-pill">Since 2019 · Bangalore</span>
-      <p class="hero-script">Crispy. Authentic. Irresistible.</p>
-      <h1 class="hero-title">The Dosa<br/>You'll <span class="hero-accent">Love,</span><br/>Every Time!</h1>
-      <p class="hero-desc">Made with passion. Served with love.<br/>One world. One dosa. One love.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/916360424868" target="_blank" class="btn-primary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
-          Order on WhatsApp
-        </a>
-        <a href="#menu" class="btn-ghost">Explore Menu</a>
-      </div>
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CHAPTER I — THE STORY BEGINS
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-hero" id="home" data-chapter="I">
+  <div class="hero-reel">
+    <div class="reel-slide active" style="background-image:url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1800&q=90')"></div>
+    <div class="reel-slide" style="background-image:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1800&q=90')"></div>
+    <div class="reel-slide" style="background-image:url('https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1800&q=90')"></div>
+  </div>
+  <div class="hero-veil"></div>
+  <div class="hero-body">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span>Bangalore · Est. 2019</span>
+      <span class="eyebrow-line"></span>
+    </div>
+    <h1 class="hero-headline">
+      <em class="hl-script">A story</em><br/>
+      <span class="hl-big">told in every</span><br/>
+      <span class="hl-big hl-outline">crisp fold.</span>
+    </h1>
+    <p class="hero-lede">From a single cast-iron pan to the hearts of thousands — this is Mahalakshmi Kitchen.</p>
+    <div class="hero-cta-row">
+      <a href="#ch-dawn" class="btn-film">Begin the Story ↓</a>
+      <a href="https://wa.me/916360424868" target="_blank" class="btn-wa-sm">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
+        Order Now
+      </a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+  <div class="hero-reel-dots">
+    <button class="rd active" data-slide="0"></button>
+    <button class="rd" data-slide="1"></button>
+    <button class="rd" data-slide="2"></button>
+  </div>
+  <div class="hero-scroll-nudge">
+    <div class="nudge-line"></div>
     <span>Scroll</span>
   </div>
 </section>
 
-<!-- ========== STATS ========== -->
-<section class="stats-bar">
-  <div class="container stats-inner">
-    <div class="stat reveal">
-      <strong class="counter" data-target="1200">0</strong><span>+</span>
-      <p>Happy Customers</p>
-    </div>
-    <div class="stat-sep"></div>
-    <div class="stat reveal">
-      <strong class="counter" data-target="25">0</strong><span>+</span>
-      <p>Dosa Varieties</p>
-    </div>
-    <div class="stat-sep"></div>
-    <div class="stat reveal">
-      <strong class="counter" data-target="5">0</strong><span>&nbsp;Yrs</span>
-      <p>Of Serving Joy</p>
-    </div>
-    <div class="stat-sep"></div>
-    <div class="stat reveal">
-      <strong>4.9</strong><span>★</span>
-      <p>Google Rating</p>
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CHAPTER II — IT BEGINS AT DAWN
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-dawn" id="ch-dawn" data-chapter="II">
+  <div class="dawn-photo">
+    <div class="dawn-photo-bg parallax-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=90')"></div>
+    <div class="dawn-photo-caption">
+      <span class="caption-num">01</span>
+      <p>Every dosa begins the night before</p>
     </div>
   </div>
-</section>
-
-<!-- ========== FEATURES ========== -->
-<section class="features-section">
-  <div class="container features-grid">
-    <div class="feat-card reveal">
-      <div class="feat-icon-wrap"><span>🌿</span></div>
-      <h3>100% Fresh Ingredients</h3>
-      <p>We source only the finest, freshest produce daily for every dosa we serve.</p>
-    </div>
-    <div class="feat-card reveal">
-      <div class="feat-icon-wrap"><span>🍲</span></div>
-      <h3>Authentic South Indian Taste</h3>
-      <p>Traditional recipes passed down through generations, unchanged and uncompromised.</p>
-    </div>
-    <div class="feat-card reveal">
-      <div class="feat-icon-wrap"><span>❤️</span></div>
-      <h3>Made With Love</h3>
-      <p>Each dosa is crafted with care, attention, and a deep love for the art of cooking.</p>
-    </div>
-    <div class="feat-card reveal">
-      <div class="feat-icon-wrap"><span>🌍</span></div>
-      <h3>One World, One Dosa</h3>
-      <p>Uniting people from all walks of life through the universal language of great food.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== MENU ========== -->
-<section class="menu-section" id="menu">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-script">Our Special Dosas</span>
-      <h2 class="section-title">Made for Every Dosa Lover</h2>
-      <div class="title-ornament"><span></span><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C10 8 4 10 2 12c2 2 8 4 10 10 2-6 8-8 10-10-2-2-8-4-10-10z" fill="#D4A017"/></svg><span></span></div>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-card reveal">
-        <div class="menu-img img-masala">
-          <div class="menu-overlay">
-            <p>Classic potato masala stuffed crispy dosa — our signature dish.</p>
-          </div>
-          <span class="menu-badge">⭐ Popular</span>
-        </div>
-        <div class="menu-info">
-          <h4>Masala Dosa</h4>
-          <p>Classic potato masala stuffed dosa</p>
-        </div>
+  <div class="dawn-text">
+    <div class="chapter-tag"><span>Chapter II</span></div>
+    <h2 class="ch-title">It begins<br/><em>at dawn.</em></h2>
+    <div class="ch-rule"></div>
+    <p class="ch-lede">Long before the first customer arrives, our kitchen stirs to life. The batter — soaked, ground, and fermented overnight — is ready. The cast-iron tawa is seasoned with memory.</p>
+    <p class="ch-body">For generations, South Indian families have woken before sunrise to prepare dosa batter. This is not fast food. This is ritual. We honour that ritual every single day in our kitchen in Bangalore.</p>
+    <div class="dawn-stats">
+      <div class="ds-item">
+        <strong>12 hrs</strong>
+        <span>Fermentation time</span>
       </div>
-      <div class="menu-card reveal">
-        <div class="menu-img img-ghee">
-          <div class="menu-overlay">
-            <p>Crispy, golden dosa roasted to perfection with farm-fresh ghee.</p>
-          </div>
-        </div>
-        <div class="menu-info">
-          <h4>Ghee Roast</h4>
-          <p>Crispy, roasted to perfection with ghee</p>
-        </div>
+      <div class="ds-item">
+        <strong>3 AM</strong>
+        <span>When our kitchen wakes</span>
       </div>
-      <div class="menu-card reveal">
-        <div class="menu-img img-mysore">
-          <div class="menu-overlay">
-            <p>Fiery Mysore chutney base with spiced potato masala filling.</p>
-          </div>
-          <span class="menu-badge menu-badge--spicy">🌶 Spicy</span>
-        </div>
-        <div class="menu-info">
-          <h4>Mysore Masala Dosa</h4>
-          <p>Spicy mysore chutney with potato masala</p>
-        </div>
-      </div>
-      <div class="menu-card reveal">
-        <div class="menu-img img-rava">
-          <div class="menu-overlay">
-            <p>Thin, lacy rava dosa with a perfectly crispy texture and soft center.</p>
-          </div>
-        </div>
-        <div class="menu-info">
-          <h4>Rava Dosa</h4>
-          <p>Crispy rava dosa with a soft center</p>
-        </div>
-      </div>
-      <div class="menu-card reveal">
-        <div class="menu-img img-onion">
-          <div class="menu-overlay">
-            <p>Crispy dosa generously topped with fresh onions and aromatic spices.</p>
-          </div>
-        </div>
-        <div class="menu-info">
-          <h4>Onion Dosa</h4>
-          <p>Crispy dosa topped with onions &amp; spices</p>
-        </div>
-      </div>
-      <div class="menu-card reveal">
-        <div class="menu-img img-plain">
-          <div class="menu-overlay">
-            <p>Simple, thin, and perfectly crispy — the timeless classic plain dosa.</p>
-          </div>
-        </div>
-        <div class="menu-info">
-          <h4>Plain Dosa</h4>
-          <p>Simple, light &amp; crispy classic plain dosa</p>
-        </div>
-      </div>
-    </div>
-    <div class="menu-cta reveal">
-      <a href="https://wa.me/916360424868" target="_blank" class="btn-primary">View Full Menu on WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== ABOUT ========== -->
-<section class="about-section" id="about">
-  <div class="about-img reveal">
-    <div class="about-photo"></div>
-    <div class="about-float-card">
-      <span class="about-float-num">5★</span>
-      <p>South Indian Excellence</p>
-    </div>
-  </div>
-  <div class="about-content reveal">
-    <span class="section-script">About Us</span>
-    <h2 class="section-title left">The Taste<br/>of Tradition</h2>
-    <div class="about-divider"></div>
-    <p class="about-lead">At Mahalakshmi Kitchen, we believe that a perfect dosa is an art form — a harmony of crisp texture, rich flavour, and pure love.</p>
-    <p class="about-body">From traditional family recipes handed down through generations to the finest handpicked ingredients, we bring you the authentic taste of South India in every single bite. Our kitchen is built on the pillars of hygiene, honesty, and heart.</p>
-    <div class="about-props">
-      <div class="about-prop">
-        <div class="prop-icon">🧹</div>
-        <div>
-          <strong>Hygienic Preparation</strong>
-          <p>Strict kitchen hygiene standards, always.</p>
-        </div>
-      </div>
-      <div class="about-prop">
-        <div class="prop-icon">🚫</div>
-        <div>
-          <strong>No Preservatives</strong>
-          <p>No artificial colours or additives, ever.</p>
-        </div>
-      </div>
-      <div class="about-prop">
-        <div class="prop-icon">🎁</div>
-        <div>
-          <strong>Freshly Made to Order</strong>
-          <p>Every dosa is made the moment you order.</p>
-        </div>
-      </div>
-    </div>
-    <a href="#contact" class="btn-outline-dark">Our Story</a>
-  </div>
-</section>
-
-<!-- ========== TESTIMONIALS ========== -->
-<section class="testimonials-section">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-script">What People Say</span>
-      <h2 class="section-title">Loved by Dosa Enthusiasts</h2>
-      <div class="title-ornament"><span></span><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C10 8 4 10 2 12c2 2 8 4 10 10 2-6 8-8 10-10-2-2-8-4-10-10z" fill="#D4A017"/></svg><span></span></div>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p>"The Masala Dosa here is the closest thing to what my grandmother used to make in Mysore. Crispy, fresh, absolutely authentic. This place is a hidden gem!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">R</div>
-          <div>
-            <strong>Rahul Sharma</strong>
-            <span>Google Review</span>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p>"Ordered via WhatsApp and got the freshest dosas in 20 minutes. The Ghee Roast was buttery perfection. Service was warm and super responsive. Highly recommend!"</p>
-        <div class="testi-author">
-          <div class="testi-avatar">P</div>
-          <div>
-            <strong>Priya Nagarajan</strong>
-            <span>Google Review</span>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal">
-        <div class="testi-stars">★★★★★</div>
-        <p>"Tried the Mysore Masala Dosa and it blew my mind! The spice level was perfect, the batter was so well fermented. This is genuine South Indian cooking at its best."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">A</div>
-          <div>
-            <strong>Ananya Krishnamurthy</strong>
-            <span>Google Review</span>
-          </div>
-        </div>
+      <div class="ds-item">
+        <strong>0</strong>
+        <span>Shortcuts taken</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== GALLERY ========== -->
-<section class="gallery-section" id="gallery">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-script">Gallery</span>
-      <h2 class="section-title">A Feast for the Eyes</h2>
-      <div class="title-ornament"><span></span><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C10 8 4 10 2 12c2 2 8 4 10 10 2-6 8-8 10-10-2-2-8-4-10-10z" fill="#D4A017"/></svg><span></span></div>
-    </div>
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CHAPTER III — THE INGREDIENTS
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-ingredients" id="ch-ingredients" data-chapter="III">
+  <div class="ing-header">
+    <div class="chapter-tag light"><span>Chapter III</span></div>
+    <h2 class="ch-title dark">Only the finest<br/>ingredients survive.</h2>
+    <p class="ch-lede dark">We reject shortcuts. We reject compromise. Every element of our batter and filling is chosen with obsessive care.</p>
   </div>
-  <div class="gallery-mosaic">
-    <div class="g-item g-large img-gal1 reveal"></div>
-    <div class="g-item img-gal2 reveal"></div>
-    <div class="g-item img-gal3 reveal"></div>
-    <div class="g-item g-large img-gal4 reveal"></div>
-    <div class="g-item img-gal5 reveal"></div>
-    <div class="g-item img-gal6 reveal"></div>
+  <div class="ing-grid">
+    <div class="ing-card ing-tall">
+      <div class="ing-img" style="background-image:url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=90')"></div>
+      <div class="ing-label">
+        <span class="il-num">01</span>
+        <span class="il-name">Hand-ground Spices</span>
+        <p>Sourced from Karnataka's spice markets. Ground fresh each morning, never pre-mixed.</p>
+      </div>
+    </div>
+    <div class="ing-stack">
+      <div class="ing-card">
+        <div class="ing-img" style="background-image:url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=700&q=90')"></div>
+        <div class="ing-label">
+          <span class="il-num">02</span>
+          <span class="il-name">Idli Rice</span>
+          <p>Short-grain rice chosen for its perfect starch content — the backbone of crispy batter.</p>
+        </div>
+      </div>
+      <div class="ing-card">
+        <div class="ing-img" style="background-image:url('https://images.unsplash.com/photo-1615361200141-f45040f367be?auto=format&fit=crop&w=700&q=90')"></div>
+        <div class="ing-label">
+          <span class="il-num">03</span>
+          <span class="il-name">Urad Dal</span>
+          <p>Split black lentils, soaked for hours. They give the dosa its signature lightness.</p>
+        </div>
+      </div>
+    </div>
+    <div class="ing-card ing-tall">
+      <div class="ing-img" style="background-image:url('https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=90')"></div>
+      <div class="ing-label">
+        <span class="il-num">04</span>
+        <span class="il-name">Farm Potatoes & Ghee</span>
+        <p>The masala filling uses potatoes from local farms. The ghee comes from trusted dairies — golden, clarified, real.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ========== CTA ========== -->
-<section class="cta-section">
-  <div class="cta-bg"></div>
-  <div class="cta-overlay"></div>
-  <div class="container cta-inner reveal">
-    <div class="cta-text">
-      <h2>Craving a delicious dosa?</h2>
-      <p>We're just a message away — fresh, hot, and made to order.</p>
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CHAPTER IV — THE CRAFT (FULLBLEED)
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-craft" id="ch-craft" data-chapter="IV">
+  <div class="craft-bg parallax-img" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1800&q=90')"></div>
+  <div class="craft-veil"></div>
+  <div class="craft-body">
+    <div class="chapter-tag"><span>Chapter IV</span></div>
+    <blockquote class="craft-quote">
+      "A dosa is not cooked.<br/>It is<em> coaxed</em>."
+    </blockquote>
+    <p class="craft-attr">— The Mahalakshmi Kitchen Philosophy</p>
+    <div class="craft-facts">
+      <div class="cf-item">
+        <strong>230°C</strong>
+        <span>The perfect tawa temperature</span>
+      </div>
+      <div class="cf-item">
+        <strong>90 sec</strong>
+        <span>Time to a golden crisp</span>
+      </div>
+      <div class="cf-item">
+        <strong>1 motion</strong>
+        <span>One fluid spiral spread</span>
+      </div>
     </div>
-    <a href="https://wa.me/916360424868" target="_blank" class="cta-wa-btn">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
-      6360424868
+  </div>
+</section>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CHAPTER V — THE DOSAS (MENU)
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-menu" id="ch-menu" data-chapter="V">
+  <div class="menu-header">
+    <div class="chapter-tag light"><span>Chapter V</span></div>
+    <h2 class="ch-title dark">Six dosas.<br/>Six <em>characters.</em></h2>
+    <p class="ch-lede dark">Each one a distinct personality. Each one made to order, served with sambar and two fresh chutneys.</p>
+  </div>
+  <div class="dosa-reel-track" id="dosaTrack">
+
+    <article class="dosa-panel" style="--bg:url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1400&q=90')">
+      <div class="dp-veil"></div>
+      <div class="dp-content">
+        <span class="dp-num">01</span>
+        <h3 class="dp-name">Masala Dosa</h3>
+        <p class="dp-desc">Our icon. A wafer-thin golden crepe folded around spiced potato masala, served with coconut chutney and sambar. The one that started it all.</p>
+        <span class="dp-tag">⭐ Our Signature</span>
+      </div>
+    </article>
+
+    <article class="dosa-panel" style="--bg:url('https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1400&q=90')">
+      <div class="dp-veil"></div>
+      <div class="dp-content">
+        <span class="dp-num">02</span>
+        <h3 class="dp-name">Ghee Roast</h3>
+        <p class="dp-desc">For those who believe butter makes everything better. Slow-roasted in farm ghee until it shimmers gold. Crispy at the edge, rich at the soul.</p>
+        <span class="dp-tag">✨ Chef's Pick</span>
+      </div>
+    </article>
+
+    <article class="dosa-panel" style="--bg:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1400&q=90')">
+      <div class="dp-veil"></div>
+      <div class="dp-content">
+        <span class="dp-num">03</span>
+        <h3 class="dp-name">Mysore Masala</h3>
+        <p class="dp-desc">Bold. Defiant. A fiery Mysore red chutney spread inside before the masala is folded in. Not for the faint of heart — but impossible to forget.</p>
+        <span class="dp-tag">🌶 For Spice Lovers</span>
+      </div>
+    </article>
+
+    <article class="dosa-panel" style="--bg:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1400&q=90')">
+      <div class="dp-veil"></div>
+      <div class="dp-content">
+        <span class="dp-num">04</span>
+        <h3 class="dp-name">Rava Dosa</h3>
+        <p class="dp-desc">Lacy, delicate, unpredictable. Made with semolina and rice flour, each Rava Dosa is unique — its pattern of holes a fingerprint of the batter's mood.</p>
+        <span class="dp-tag">🌼 Light & Crispy</span>
+      </div>
+    </article>
+
+    <article class="dosa-panel" style="--bg:url('https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=1400&q=90')">
+      <div class="dp-veil"></div>
+      <div class="dp-content">
+        <span class="dp-num">05</span>
+        <h3 class="dp-name">Onion Dosa</h3>
+        <p class="dp-desc">Fresh white onions and green chillies pressed into the batter as it spreads. The sizzle tells you it's ready. The aroma tells you it's right.</p>
+        <span class="dp-tag">🧅 Rustic & Bold</span>
+      </div>
+    </article>
+
+    <article class="dosa-panel" style="--bg:url('https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?auto=format&fit=crop&w=1400&q=90')">
+      <div class="dp-veil"></div>
+      <div class="dp-content">
+        <span class="dp-num">06</span>
+        <h3 class="dp-name">Plain Dosa</h3>
+        <p class="dp-desc">The purist's choice. Nothing hidden. Nothing added. Just batter, heat, and skill. If our Plain Dosa impresses you, you understand what we stand for.</p>
+        <span class="dp-tag">🤍 The Classic</span>
+      </div>
+    </article>
+
+  </div>
+  <div class="dosa-reel-nav">
+    <button class="drn-btn drn-prev" id="drnPrev" aria-label="Previous">←</button>
+    <div class="drn-dots" id="drnDots">
+      <button class="drn-dot active"></button>
+      <button class="drn-dot"></button>
+      <button class="drn-dot"></button>
+      <button class="drn-dot"></button>
+      <button class="drn-dot"></button>
+      <button class="drn-dot"></button>
+    </div>
+    <button class="drn-btn drn-next" id="drnNext" aria-label="Next">→</button>
+  </div>
+  <div class="menu-full-cta">
+    <a href="https://wa.me/916360424868?text=Hi%2C%20I%20would%20like%20to%20see%20the%20full%20menu" target="_blank" class="btn-film dark">See the Full Menu on WhatsApp →</a>
+  </div>
+</section>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CHAPTER VI — THE JOY
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-love" id="ch-love" data-chapter="VI">
+  <div class="love-mosaic">
+    <div class="lm-a parallax-img" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=90')">
+      <div class="lm-caption">The first bite<br/>is always the best</div>
+    </div>
+    <div class="lm-b parallax-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=90')"></div>
+    <div class="lm-c">
+      <div class="chapter-tag light"><span>Chapter VI</span></div>
+      <h2 class="ch-title dark">Food this good<br/>is meant to<br/><em>be shared.</em></h2>
+      <div class="ch-rule gold"></div>
+      <p class="ch-body dark">A dosa eaten alone is a meal. A dosa shared is a memory. We have been privileged to sit at thousands of tables — as the reason friends met, families gathered, and strangers became neighbours.</p>
+      <div class="love-testimonials">
+        <div class="lt-item">
+          <p>"The closest I've come to my mother's cooking, 400 km from home."</p>
+          <strong>— Kavya R., Bangalore</strong>
+        </div>
+        <div class="lt-item">
+          <p>"I order the Ghee Roast every Sunday. It is, without exaggeration, a ritual."</p>
+          <strong>— Sanjay M., Bangalore</strong>
+        </div>
+      </div>
+    </div>
+    <div class="lm-d parallax-img" style="background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=90')">
+      <div class="lm-rating">
+        <strong>4.9</strong>
+        <div class="lm-stars">★★★★★</div>
+        <span>1,200+ Reviews</span>
+      </div>
+    </div>
+    <div class="lm-e parallax-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=90')"></div>
+  </div>
+</section>
+
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     EPILOGUE — ORDER CTA
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="chapter ch-epilogue">
+  <div class="epi-bg parallax-img" style="background-image:url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1800&q=90')"></div>
+  <div class="epi-veil"></div>
+  <div class="epi-body">
+    <p class="epi-script">Your chapter begins now</p>
+    <h2 class="epi-title">Order a dosa.<br/>Write your story.</h2>
+    <a href="https://wa.me/916360424868" target="_blank" class="btn-wa-large">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
+      Order on WhatsApp · 6360424868
     </a>
+    <p class="epi-hours">Open every day · 7:00 AM – 10:00 PM</p>
   </div>
 </section>
 
-<!-- ========== CONTACT ========== -->
-<section class="contact-section" id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-script">Contact Us</span>
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="title-ornament"><span></span><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C10 8 4 10 2 12c2 2 8 4 10 10 2-6 8-8 10-10-2-2-8-4-10-10z" fill="#D4A017"/></svg><span></span></div>
-    </div>
-    <div class="contact-grid">
-      <a href="tel:6360424868" class="contact-card reveal">
-        <div class="contact-icon-wrap">📞</div>
-        <h4>Call Us</h4>
-        <p>6360424868</p>
-      </a>
-      <a href="mailto:mahalakshmikitchen@gmail.com" class="contact-card reveal">
-        <div class="contact-icon-wrap">✉️</div>
-        <h4>Email Us</h4>
-        <p>mahalakshmikitchen@gmail.com</p>
-      </a>
-      <div class="contact-card reveal">
-        <div class="contact-icon-wrap">📍</div>
-        <h4>Location</h4>
-        <p>Serving Happiness Everywhere</p>
-      </div>
-      <div class="contact-card reveal">
-        <div class="contact-icon-wrap">🕐</div>
-        <h4>Opening Hours</h4>
-        <p>Mon – Sun · 7:00 AM – 10:00 PM</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <div class="footer-top">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-mark">🍽️</div>
+<!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     CONTACT
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+<section class="ch-contact" id="ch-contact">
+  <div class="contact-inner">
+    <div class="ci-left">
+      <p class="ci-script">Find Us</p>
+      <h2 class="ci-title">Come for the dosa.<br/>Stay for the story.</h2>
+      <div class="ci-details">
+        <a href="tel:6360424868" class="ci-item">
+          <span class="ci-icon">📞</span>
           <div>
-            <span class="footer-logo-name">Mahalakshmi <em>Kitchen</em></span>
-            <span class="footer-logo-kn">ಮಹಾಲಕ್ಷ್ಮಿ ಕಿಚನ್</span>
+            <strong>Call Us</strong>
+            <p>6360424868</p>
+          </div>
+        </a>
+        <a href="mailto:mahalakshmikitchen@gmail.com" class="ci-item">
+          <span class="ci-icon">✉️</span>
+          <div>
+            <strong>Write to Us</strong>
+            <p>mahalakshmikitchen@gmail.com</p>
+          </div>
+        </a>
+        <div class="ci-item">
+          <span class="ci-icon">🕐</span>
+          <div>
+            <strong>Opening Hours</strong>
+            <p>Monday – Sunday, 7:00 AM – 10:00 PM</p>
           </div>
         </div>
-        <p>Mahalakshmi Kitchen brings you the most delicious and authentic dosas — made with love, tradition, and the finest ingredients.</p>
-        <div class="social-row">
-          <a href="#" class="social-btn" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://wa.me/916360424868" class="social-btn" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
-          </a>
-          <a href="#" class="social-btn" aria-label="Google">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v3.2h5.38C16.73 16.7 14.6 18 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.57 0 3 .59 4.09 1.56l2.39-2.39C16.89 3.43 14.57 2.5 12 2.5 6.75 2.5 2.5 6.75 2.5 12S6.75 21.5 12 21.5c5.25 0 9.5-4.25 9.5-9.5 0-.63-.07-1.27-.15-1.9z"/></svg>
-          </a>
+        <div class="ci-item">
+          <span class="ci-icon">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p>Serving Happiness, Bangalore</p>
+          </div>
         </div>
       </div>
-      <div class="footer-col">
-        <h5>Quick Links</h5>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#menu">Our Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact Us</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <a href="tel:6360424868">📞 6360424868</a>
-        <a href="mailto:mahalakshmikitchen@gmail.com">✉️ mahalakshmikitchen@gmail.com</a>
-        <p>📍 Serving Happiness Everywhere</p>
-      </div>
-      <div class="footer-col">
-        <h5>Opening Hours</h5>
-        <p>Monday – Sunday</p>
-        <p class="footer-hours">7:00 AM – 10:00 PM</p>
-        <a href="https://wa.me/916360424868" target="_blank" class="footer-order-btn">Order Now →</a>
-      </div>
+    </div>
+    <div class="ci-right">
+      <div class="ci-img" style="background-image:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=900&q=90')"></div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <p>© 2024 Mahalakshmi Kitchen. All Rights Reserved. · Made with ❤️ in Bangalore</p>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="site-footer">
+  <div class="sf-inner">
+    <div class="sf-top">
+      <div class="sf-brand">
+        <span class="sf-script">Mahalakshmi</span>
+        <span class="sf-word">KITCHEN</span>
+        <span class="sf-kn">ಮಹಾಲಕ್ಷ್ಮಿ ಕಿಚನ್</span>
+      </div>
+      <p class="sf-tagline">Crispy. Authentic. Irresistible.<br/>A story told in every crisp fold, since 2019.</p>
+      <div class="sf-socials">
+        <a href="#" aria-label="Facebook" class="sf-social">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" class="sf-social">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/916360424868" aria-label="WhatsApp" class="sf-social">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="sf-nav">
+      <a href="#home">The Story</a>
+      <a href="#ch-dawn">The Craft</a>
+      <a href="#ch-ingredients">Ingredients</a>
+      <a href="#ch-menu">Our Dosas</a>
+      <a href="#ch-love">The Joy</a>
+      <a href="#ch-contact">Visit Us</a>
+    </div>
+    <div class="sf-bottom">
+      <p>© 2024 Mahalakshmi Kitchen · All Rights Reserved · Made with ❤️ in Bangalore</p>
     </div>
   </div>
 </footer>
 
+<!-- ░░ FLOATING ORDER ░░ -->
+<a href="https://wa.me/916360424868" target="_blank" class="float-order" id="floatOrder">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.123 1.528 5.855L.057 23.945l6.272-1.643A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.824 9.824 0 01-5.006-1.368l-.36-.214-3.723.976.993-3.63-.235-.373A9.818 9.818 0 012.182 12c0-5.423 4.395-9.818 9.818-9.818 5.423 0 9.818 4.395 9.818 9.818 0 5.423-4.395 9.818-9.818 9.818z"/></svg>
+  <span>Order Now</span>
+</a>
+
 <script>
-// Header scroll glass effect
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 60);
+/* ── Preloader ── */
+window.addEventListener('load', () => {
+  const pre = document.getElementById('preloader');
+  const ring = pre.querySelector('.pre-ring circle');
+  ring.style.animation = 'ringFill .9s ease forwards';
+  setTimeout(() => {
+    pre.classList.add('done');
+    document.body.classList.add('loaded');
+  }, 1200);
 });
 
-// Mobile burger
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav');
+/* ── Header ── */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('stuck', window.scrollY > 80);
+}, {passive:true});
+
+/* ── Burger ── */
+const burger = document.getElementById('shBurger');
+const nav = document.getElementById('shNav');
 burger.addEventListener('click', () => {
   burger.classList.toggle('open');
   nav.classList.toggle('open');
 });
-nav.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    burger.classList.remove('open');
-    nav.classList.remove('open');
+
+/* ── Hero reel ── */
+const slides = document.querySelectorAll('.reel-slide');
+const dots = document.querySelectorAll('.reel-dots .rd, .hero-reel-dots .rd');
+let current = 0, reelTimer;
+function goSlide(n) {
+  slides[current].classList.remove('active');
+  document.querySelectorAll('.hero-reel-dots .rd')[current].classList.remove('active');
+  current = (n + slides.length) % slides.length;
+  slides[current].classList.add('active');
+  document.querySelectorAll('.hero-reel-dots .rd')[current].classList.add('active');
+}
+document.querySelectorAll('.hero-reel-dots .rd').forEach((d, i) => {
+  d.addEventListener('click', () => { clearInterval(reelTimer); goSlide(i); reelTimer = setInterval(() => goSlide(current + 1), 5000); });
+});
+reelTimer = setInterval(() => goSlide(current + 1), 5000);
+
+/* ── Story progress bar ── */
+const bar = document.getElementById('storyProgress');
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (window.scrollY / max * 100) + '%';
+}, {passive:true});
+
+/* ── Chapter indicator ── */
+const chapters = document.querySelectorAll('[data-chapter]');
+const ciNum = document.getElementById('ciNum');
+const ci = document.getElementById('chapterIndicator');
+const numMap = {I:'I',II:'II',III:'III',IV:'IV',V:'V',VI:'VI'};
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const c = e.target.dataset.chapter;
+      if (c) { ciNum.textContent = c; ci.classList.add('show'); }
+    }
   });
+}, {threshold: 0.3});
+chapters.forEach(c => io.observe(c));
+window.addEventListener('scroll', () => {
+  if (window.scrollY < 80) ci.classList.remove('show');
+}, {passive:true});
+
+/* ── Scroll reveal ── */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+}, {threshold: 0.1});
+document.querySelectorAll('.dawn-text, .dawn-photo, .ing-header, .ing-card, .craft-body, .menu-header, .love-mosaic > *, .epi-body, .ci-left, .ci-right').forEach(el => {
+  el.classList.add('sr');
+  revealObs.observe(el);
 });
 
-// Active nav link
-const sections = document.querySelectorAll('section[id]');
+/* ── Dosa panel reel ── */
+const track = document.getElementById('dosaTrack');
+const panels = track.querySelectorAll('.dosa-panel');
+const drnDots = document.getElementById('drnDots').querySelectorAll('.drn-dot');
+let dosaIdx = 0;
+function goDosa(n) {
+  dosaIdx = (n + panels.length) % panels.length;
+  panels.forEach((p, i) => p.classList.toggle('active', i === dosaIdx));
+  drnDots.forEach((d, i) => d.classList.toggle('active', i === dosaIdx));
+}
+goDosa(0);
+document.getElementById('drnNext').addEventListener('click', () => goDosa(dosaIdx + 1));
+document.getElementById('drnPrev').addEventListener('click', () => goDosa(dosaIdx - 1));
+drnDots.forEach((d, i) => d.addEventListener('click', () => goDosa(i)));
+
+/* touch swipe on dosa track */
+let touchX = 0;
+track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+track.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 50) goDosa(dosaIdx + (dx < 0 ? 1 : -1));
+}, {passive:true});
+
+/* ── Active nav ── */
+const secs = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
   let cur = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
-  document.querySelectorAll('.nav-link').forEach(l => {
-    l.classList.toggle('active', l.getAttribute('href') === '#' + cur);
-  });
-}, { passive: true });
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  document.querySelectorAll('.sh-link').forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+}, {passive:true});
 
-// Scroll reveal
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      revealObserver.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// Counter animation
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const el = e.target;
-      const target = +el.dataset.target;
-      const duration = 1800;
-      const step = target / (duration / 16);
-      let current = 0;
-      const tick = () => {
-        current = Math.min(current + step, target);
-        el.textContent = Math.floor(current).toLocaleString();
-        if (current < target) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      counterObserver.unobserve(el);
-    }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+/* ── Float order show after hero ── */
+const floatOrder = document.getElementById('floatOrder');
+const heroEl = document.getElementById('home');
+const showObs = new IntersectionObserver(entries => {
+  floatOrder.classList.toggle('visible', !entries[0].isIntersecting);
+}, {threshold: 0.1});
+showObs.observe(heroEl);
 </script>
 </body>
 </html>
